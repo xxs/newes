@@ -682,6 +682,12 @@
             <version>${jsoup.version}</version>
         </dependency>
 
+		<!-- freemarker engine -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
+		</dependency>
 
     </dependencies>
 
@@ -743,6 +749,9 @@
         <jcaptcha.version>2.0-alpha-1</jcaptcha.version>
 
         <jsoup.version>1.7.3</jsoup.version>
+		
+		<freemarker.version>2.3.19</freemarker.version>
+		
     </properties>
 
 </project>
