@@ -109,6 +109,21 @@
             </map>
         </property>
     </bean>
+    
+	<!-- 配置freeMarker的模板路径 -->  
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
+        <property name="templateLoaderPath">  
+            <value>/WEB-INF/ftl/</value>  
+        </property>    
+        <property name="defaultEncoding">  
+            <value>utf-8</value>  
+        </property>  
+        <property name="freemarkerSettings">  
+            <props>  
+                <prop key="template_update_delay">3600</prop>  
+            </props>  
+        </property>  
+    </bean>
 
     <!--
         spring data jpa repository
