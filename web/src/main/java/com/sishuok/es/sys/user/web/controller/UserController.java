@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Copyright (c) 2005-2012 https://github.com/zhangkaitao
  *
