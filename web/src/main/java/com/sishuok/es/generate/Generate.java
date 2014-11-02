@@ -47,7 +47,6 @@ public class Generate {
 		String sysName = "showcase";			// 所属系统名，例：sys、showcase、maintain、personal
 		String moduleName = "member";		// 模块名（可选） 
 		String className = "Member";			// 类名，例：user
-		String tableName = "showcase_member";			// 类名，例：user
 		String classAuthor = "xxs";		// 类作者，例：ThinkGem
 		String functionName = "会员";			// 功能名，例：用户
 
@@ -103,13 +102,13 @@ public class Generate {
 		model.put("moduleName", StringUtils.lowerCase(moduleName));		//模块名称
 		model.put("className", StringUtils.uncapitalize(className));	//类名（首字母大写）
 		model.put("ClassName", StringUtils.capitalize(className));		//类名
-		model.put("tableName", StringUtils.capitalize(tableName));		//类名
 		model.put("classAuthor", StringUtils.isNotBlank(classAuthor)?classAuthor:"Generate Tools");		//作者
 		model.put("classVersion", DateUtils.getDate());					//日期
 		model.put("functionName", functionName);						//模块名
-//		model.put("urlPrefix", model.get("moduleName")+"_"+model.get("className"));	//jsp模板中需要的请求字符串
-//		model.put("viewPrefix", //StringUtils.substringAfterLast(model.get("packageName"),".")+"/"+
-//				model.get("urlPrefix"));
+		model.put("tableName", model.get("className"));	//表名
+		model.put("urlPrefix", model.get("moduleName")+"_"+model.get("className"));	//jsp模板中需要的请求字符串
+		model.put("viewPrefix", //StringUtils.substringAfterLast(model.get("packageName"),".")+"/"+
+				model.get("urlPrefix"));
 		model.put("permissionPrefix", model.get("sysName")+":"+model.get("moduleName"));	//权限字符串
 
 		// 生成 Entity
